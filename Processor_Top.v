@@ -12,6 +12,7 @@ module Processor_Top (
   wire [31:0] address_plus_4;
   wire [31:0] branch_addr_offset;
   wire [31:0] branch_address;
+  wire [31:0] jump_address;
   wire [31:0] instrn;
   wire ctrl_write_en;
   wire final_write_en;
@@ -27,6 +28,9 @@ module Processor_Top (
 
   assign addr_incr = (!rst_n) ? 32'd0 : 32'd4;
   assign final_write_en = (!rst_n) ? 1'b0 : ctrl_write_en;
+  assign jump_address[31:28] = address_plus_4[31:28];
+  assign jump_address[27:2] = instrn[25:0];
+  assign jump_address[1:0] = 0;
 
   Program_Counter prg_cntr (
       .clk(clk),
@@ -98,6 +102,7 @@ module Processor_Top (
       .instrn_opcode        (instrn[31:26]),
       .address_plus_4       (address_plus_4),
       .branch_address       (branch_address),
+      .jump_address         (jump_address),
       .ctrl_in_address      (ctrl_in_address),
       .alu_result           (alu_result),
       .zero_out             (zero_out),

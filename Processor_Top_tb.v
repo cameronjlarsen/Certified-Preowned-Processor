@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module Processor_Top_tb;
 
   // Inputs
@@ -13,8 +14,8 @@ module Processor_Top_tb;
   always #5 clk = ~clk;
 
   initial begin
-    $dumpfile("dump.lxt2");
-    $dumpvars();
+    $dumpfile("test.vcd");
+    $dumpvars(0, uut);
     clk   = 1'b1;
     rst_n = 1'b0;
     #30 rst_n = 1'b1;

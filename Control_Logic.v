@@ -3,6 +3,7 @@ module Control_Logic (
     instrn_opcode,
     address_plus_4,
     branch_address,
+    jump_address,
     ctrl_in_address,
     alu_result,
     zero_out,
@@ -20,6 +21,7 @@ module Control_Logic (
   input [5:0] instrn_opcode;
   input [31:0] address_plus_4;
   input [31:0] branch_address;
+  input [31:0] jump_address;
   input [31:0] datamem_read_data;
   input [31:0] alu_result;
   input zero_out;
@@ -35,6 +37,9 @@ module Control_Logic (
 
   //Select either branch address (for BEQ) or address+4 (for other cases)
   assign ctrl_in_address = (instrn_opcode == 6'h04 && zero_out) ? branch_address : address_plus_4;
+
+  //Select either jump address (for J) or address+4 (for other cases)
+  assign ctrl_in_address = (instrn_opcode == 6'h02) ? jump_address : address_plus_4;
 
   //Write enable for regfile only for R-Type and LW instructions
   assign ctrl_write_en = (instrn_opcode == 6'h00) || (instrn_opcode == 6'h23);
