@@ -35,11 +35,10 @@ module Control_Logic (
   output wire ctrl_datamem_write_en;
   output wire [31:0] ctrl_regwrite_data;
 
-  //Select either branch address (for BEQ) or address+4 (for other cases)
-  assign ctrl_in_address = (instrn_opcode == 6'h04 && zero_out) ? branch_address : address_plus_4;
-
-  //Select either jump address (for J) or address+4 (for other cases)
-  assign ctrl_in_address = (instrn_opcode == 6'h02) ? jump_address : address_plus_4;
+  //Select either branch address (for BEQ) or jump address (for J) or address+4 (for other cases)
+  assign ctrl_in_address = (instrn_opcode == 6'h04 && zero_out) ? branch_address :
+                           (instrn_opcode == 6'h02) ? jump_address :
+                           address_plus_4;
 
   //Write enable for regfile only for R-Type and LW instructions
   assign ctrl_write_en = (instrn_opcode == 6'h00) || (instrn_opcode == 6'h23);

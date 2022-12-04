@@ -30,7 +30,7 @@ module Processor_Top (
   assign final_write_en = (!rst_n) ? 1'b0 : ctrl_write_en;
   assign jump_address[31:28] = address_plus_4[31:28];
   assign jump_address[27:2] = instrn[25:0];
-  assign jump_address[1:0] = 0;
+  assign jump_address[1:0] = 2'b00;
 
   Program_Counter prg_cntr (
       .clk(clk),
