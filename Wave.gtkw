@@ -1,0 +1,81 @@
+[*]
+[*] GTKWave Analyzer v3.3.113 (w)1999-2022 BSI
+[*] Sun Dec  4 04:39:36 2022
+[*]
+[dumpfile] "/home/camjl/repos/cs3650/Certified-Preowned-Processor/test.vcd"
+[dumpfile_mtime] "Sun Dec  4 04:22:25 2022"
+[dumpfile_size] 8926
+[savefile] "/home/camjl/repos/cs3650/Certified-Preowned-Processor/Wave.gtkw"
+[timestart] 0
+[size] 1695 1287
+[pos] -1 -1
+*-3.975638 90 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] Processor_Top_tb.
+[treeopen] Processor_Top_tb.uut.
+[sst_width] 250
+[signals_width] 367
+[sst_expanded] 1
+[sst_vpaned_height] 398
+@28
+Processor_Top_tb.uut.clk
+Processor_Top_tb.uut.rst_n
+@200
+-PC
+@22
+Processor_Top_tb.uut.prg_cntr.in_address[31:0]
+Processor_Top_tb.uut.prg_cntr.out_address[31:0]
+@200
+-INSTRN MEMORY
+@22
+Processor_Top_tb.uut.instr_mem.instrn_address[31:0]
+Processor_Top_tb.uut.instr_mem.instrn[31:0]
+@200
+-REGFILE
+@22
+Processor_Top_tb.uut.regfile.read_addr1[4:0]
+Processor_Top_tb.uut.regfile.read_data1[31:0]
+Processor_Top_tb.uut.regfile.read_addr2[4:0]
+Processor_Top_tb.uut.regfile.read_data2[31:0]
+@28
+Processor_Top_tb.uut.regfile.write_en
+@22
+Processor_Top_tb.uut.regfile.write_addr[4:0]
+Processor_Top_tb.uut.regfile.write_data[31:0]
+@200
+-SIGN EXTENSION
+@22
+Processor_Top_tb.uut.sign_ext.bits16_in[15:0]
+Processor_Top_tb.uut.sign_ext.bits32_out[31:0]
+@200
+-SHIFTER
+@22
+Processor_Top_tb.uut.shifter.indata[31:0]
+Processor_Top_tb.uut.shifter.outdata[31:0]
+@200
+-ALU
+@22
+Processor_Top_tb.uut.alu.A[31:0]
+Processor_Top_tb.uut.alu.B[31:0]
+Processor_Top_tb.uut.alu.result[31:0]
+Processor_Top_tb.uut.alu.zero
+@200
+-DATA MEMORY
+@22
+Processor_Top_tb.uut.data_mem.address[31:0]
+@28
+Processor_Top_tb.uut.ctrl_datamem_write_en
+@22
+Processor_Top_tb.uut.datamem_read_data[31:0]
+@200
+-CTRL LOGIC
+@28
+Processor_Top_tb.uut.ctrl_logic.zero_out
+@22
+Processor_Top_tb.uut.ctrl_logic.ctrl_in_address[31:0]
+Processor_Top_tb.uut.ctrl_logic.jump_address[31:0]
+Processor_Top_tb.uut.ctrl_logic.branch_address[31:0]
+Processor_Top_tb.uut.ctrl_logic.instrn_opcode[5:0]
+@23
+Processor_Top_tb.uut.ctrl_logic.address_plus_4[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
