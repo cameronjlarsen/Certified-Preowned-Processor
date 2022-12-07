@@ -10,7 +10,7 @@ Single-Cycle Implementation of a MIPS processor in Verilog: https://electrobinar
 
 The single-cycle MIPS processor was built on the ALU which was used in Project 0. This ALU did not support jump instructions, giving us the learning experience of implementing a jump instruction using what we know on how they are executed. The waveforms below show a simple jump from address 0x000004 to address 0x000044, which occurs after an addition of two register contents, 0x000011 and 0x000022. 
 
-![Screenshot_2](https://user-images.githubusercontent.com/104049707/205478447-10a9e6ca-f79a-4b1e-9863-254d4aa1939d.png)
+![Screenshot_2](docs/single-cycle-simulation.png)
 
 Examining the Verilog code taught us a lot on how the MIPS processor was implemented. 
 
