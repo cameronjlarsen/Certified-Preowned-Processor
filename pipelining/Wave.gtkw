@@ -1,0 +1,65 @@
+[*]
+[*] GTKWave Analyzer v3.3.48 (w)1999-2013 BSI
+[*] Wed Dec 07 05:12:37 2022
+[*]
+[dumpfile] "C:\Folders\Classes\CS3650\Certified-Preowned-Processor\pipelining\testbench.vcd"
+[dumpfile_mtime] "Wed Dec 07 04:09:48 2022"
+[dumpfile_size] 2830818
+[savefile] "C:\Folders\Classes\CS3650\Certified-Preowned-Processor\pipelining\pipelining"
+[timestart] 46
+[size] 1920 1027
+[pos] -1 -1
+*-9.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[treeopen] testbench.top_module.
+[sst_width] 197
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 303
+@200
+-testbench
+@28
+testbench.clk
+@200
+-top_module
+@28
+testbench.top_module.clock
+testbench.top_module.rst
+testbench.top_module.EXEStage.clk
+@200
+-EXEStage
+@22
+testbench.top_module.EXEStage.ST_value_in[31:0]
+testbench.top_module.EXEStage.ST_value_out[31:0]
+@200
+-IDStage
+@22
+testbench.top_module.IDStage.instruction[31:0]
+@28
+testbench.top_module.IDStage.hazard_detected_in
+@200
+-IFStage
+@28
+testbench.top_module.IFStage.clk
+@22
+testbench.top_module.IFStage.instruction[31:0]
+testbench.top_module.IFStage.adderIn1[31:0]
+testbench.top_module.IFStage.adderOut[31:0]
+@200
+-IF2IDReg
+@22
+testbench.top_module.IF2IDReg.instructionIn[31:0]
+testbench.top_module.IF2IDReg.instruction[31:0]
+@200
+-MEMStage
+@22
+testbench.top_module.MEMStage.ST_value[31:0]
+testbench.top_module.MEMStage.dataMem_out[31:0]
+@200
+-WBStage
+@22
+testbench.top_module.WBStage.WB_res[31:0]
+testbench.top_module.WBStage.aluRes[31:0]
+testbench.top_module.WBStage.memData[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
